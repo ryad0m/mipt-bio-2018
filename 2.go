@@ -6,17 +6,6 @@ import (
 	"os"
 )
 
-
-func getSubStr(s string, sub string) ([]int) {
-	res := make([]int, 0)
-	for i := 0; i <= len(s) - len(sub); i++ {
-		if sub == s[i:i + len(sub)] {
-			res = append(res, i)
-		}
-	}
-	return res
-}
-
 func main() {
 	fin, _ := os.Open("input.txt")
 	scanner := bufio.NewReader(fin)
